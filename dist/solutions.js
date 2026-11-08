@@ -4,5 +4,18 @@ const multiplyValue = (value, multiplier) => {
     }
     return value * multiplier;
 };
-console.log(multiplyValue(10));
+const processInput = (value) => {
+    if (typeof (value) === "string") {
+        return value.trim().toLowerCase();
+    }
+    else if (typeof (value) === "number") {
+        return value * 10;
+    }
+    else if (typeof (value) === "boolean" && value === true) {
+        return "Active";
+    }
+    else
+        return "Inactive";
+};
+console.log(processInput(false));
 export {};
