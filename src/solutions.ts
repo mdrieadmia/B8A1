@@ -27,4 +27,7 @@ const formatCoordinate =  (location: readonly [latitude: number, longitude: numb
 
 
 
+const concatenateArrays = <T>(...arrays: T[][]) : T[] =>{
+    return arrays.flat();
+}
 

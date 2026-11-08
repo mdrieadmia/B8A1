@@ -21,4 +21,8 @@ const processInput = (value) => {
 const formatCoordinate = (location) => {
     return (`Location: ${location[2]} (${location[0]}, ${location[1]})`);
 };
+const concatenateArrays = (...arrays) => {
+    return arrays.flat();
+};
+console.log(concatenateArrays(["a", "b"], ["c", "d"]));
 export {};
