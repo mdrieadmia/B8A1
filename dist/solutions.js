@@ -33,4 +33,12 @@ const getPopularCourses = (course, minStudents) => {
     }
     return popularCourses;
 };
+const pluckValues = (items, key) => {
+    let data = [];
+    for (let x = 0; x < items.length; x++) {
+        let newData = items[x][key];
+        data.push(newData);
+    }
+    return data;
+};
 export {};

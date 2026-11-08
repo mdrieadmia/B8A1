@@ -5,6 +5,8 @@ const multiplyValue = (value: number, multiplier?: number): number => {
   return value * multiplier;
 };
 
+
+
 const processInput = (value: string | number | boolean): string | number => {
   if (typeof value === "string") {
     return value.trim().toLowerCase();
@@ -17,6 +19,8 @@ const processInput = (value: string | number | boolean): string | number => {
   }
 };
 
+
+
 const formatCoordinate = (
   location: readonly [
     latitude: number,
@@ -27,9 +31,14 @@ const formatCoordinate = (
   return `Location: ${location[2]} (${location[0]}, ${location[1]})`;
 };
 
+
+
 const concatenateArrays = <T>(...arrays: T[][]): T[] => {
   return arrays.flat();
 };
+
+
+
 
 interface Course {
   title: string;
@@ -46,3 +55,19 @@ const getPopularCourses = (course: Course[], minStudents: number): Course[] => {
   }
   return popularCourses;
 };
+
+
+
+
+
+const pluckValues = <T, K extends keyof T>(items : T[], key : K ) : T[K][] =>{
+    let data = [];
+    for(let x = 0; x<items.length; x++){
+        let newData = items[x][key]
+        data.push(newData)
+    }
+    return data;
+}
+
+
+
