@@ -1,4 +1,4 @@
-const multiplyValue = (value: number, multiplier?:number):number =>{
+const multiplyValue = (value: number, multiplier?:number) : number =>{
     if(!multiplier && multiplier !==0){
         return value * 2;
     }
@@ -7,15 +7,24 @@ const multiplyValue = (value: number, multiplier?:number):number =>{
 
 
 
-const processInput = (value : string | number | boolean) =>{
+const processInput = (value : string | number | boolean) : string | number =>{
     if(typeof(value) === "string"){
         return value.trim().toLowerCase();
     } else if(typeof(value) === "number"){
         return value * 10;
     } else if (typeof(value) === "boolean" && value === true){
         return "Active";
-    } else
+    } else{
         return "Inactive";
+    }
 }
 
-console.log(processInput(false))
+
+
+const formatCoordinate =  (location: readonly [latitude: number, longitude: number, locationName: string]) : string=>{
+    return(`Location: ${location[2]} (${location[0]}, ${location[1]})`);
+}
+
+
+
+

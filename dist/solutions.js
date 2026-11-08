@@ -14,8 +14,11 @@ const processInput = (value) => {
     else if (typeof (value) === "boolean" && value === true) {
         return "Active";
     }
-    else
+    else {
         return "Inactive";
+    }
 };
-console.log(processInput(false));
+const formatCoordinate = (location) => {
+    return (`Location: ${location[2]} (${location[0]}, ${location[1]})`);
+};
 export {};
