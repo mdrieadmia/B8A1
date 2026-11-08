@@ -5,13 +5,13 @@ const multiplyValue = (value, multiplier) => {
     return value * multiplier;
 };
 const processInput = (value) => {
-    if (typeof (value) === "string") {
+    if (typeof value === "string") {
         return value.trim().toLowerCase();
     }
-    else if (typeof (value) === "number") {
+    else if (typeof value === "number") {
         return value * 10;
     }
-    else if (typeof (value) === "boolean" && value === true) {
+    else if (typeof value === "boolean" && value === true) {
         return "Active";
     }
     else {
@@ -19,10 +19,18 @@ const processInput = (value) => {
     }
 };
 const formatCoordinate = (location) => {
-    return (`Location: ${location[2]} (${location[0]}, ${location[1]})`);
+    return `Location: ${location[2]} (${location[0]}, ${location[1]})`;
 };
 const concatenateArrays = (...arrays) => {
     return arrays.flat();
 };
-console.log(concatenateArrays(["a", "b"], ["c", "d"]));
+const getPopularCourses = (course, minStudents) => {
+    let popularCourses = [];
+    for (let x = 0; x < course.length; x++) {
+        if (course[x].students >= minStudents && course[x].isPublished == true) {
+            popularCourses.push(course[x]);
+        }
+    }
+    return popularCourses;
+};
 export {};
