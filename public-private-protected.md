@@ -41,3 +41,6 @@ class Employee {
 }
 
 ```
+
+## Conclusion:
+Access modifiers help us control who can use a class property or method. Public allows access from everywhere, private keeps it inside the class only, and protected allows access inside the class and its child classes. Readonly makes sure a value can't be changed after it is set. Using them properly makes our code safer, cleaner and easier to maintain.

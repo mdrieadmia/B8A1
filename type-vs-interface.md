@@ -36,3 +36,6 @@ const newStudent: Student ={
     department: "CSE",
 }
 ```
+
+## Conclusion:
+Both type alias and interface are used to create custom types in TypeScript. Interface is the better choice for object structures and classes, because it supports extends and declaration merging. Type alias is better for union, intersection, tuple and primitive types.
