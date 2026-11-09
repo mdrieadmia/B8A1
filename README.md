@@ -1,4 +1,4 @@
-# B8A1 - Assignment 1 Problem Solving with TypeScript & OOP
+## B8A1 - Assignment 1 Problem Solving with TypeScript & OOP
 
 - This assignment covers core TypeScript concepts from Modules 1–3: types, tuples, interfaces, generics, type narrowing, Promises and OOP.
 
