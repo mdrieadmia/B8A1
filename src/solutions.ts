@@ -7,6 +7,7 @@ const multiplyValue = (value: number, multiplier?: number): number => {
 
 
 
+
 const processInput = (value: string | number | boolean): string | number => {
   if (typeof value === "string") {
     return value.trim().toLowerCase();
@@ -21,6 +22,7 @@ const processInput = (value: string | number | boolean): string | number => {
 
 
 
+
 const formatCoordinate = (
   location: readonly [
     latitude: number,
@@ -30,6 +32,7 @@ const formatCoordinate = (
 ): string => {
   return `Location: ${location[2]} (${location[0]}, ${location[1]})`;
 };
+
 
 
 
@@ -59,7 +62,6 @@ const getPopularCourses = (course: Course[], minStudents: number): Course[] => {
 
 
 
-
 const pluckValues = <T, K extends keyof T>(items : T[], key : K ) : T[K][] =>{
     let data = [];
     for(let x = 0; x<items.length; x++){
@@ -70,4 +72,30 @@ const pluckValues = <T, K extends keyof T>(items : T[], key : K ) : T[K][] =>{
 }
 
 
+
+
+class Employee {
+  protected name : string;
+  private baseSalary: number;
+  constructor(name: string, baseSalary: number) {
+    this.name = name;
+    this.baseSalary = baseSalary;
+  }
+
+  getDetails(){
+    return (`Employee: ${this.name}, Base Salary: ${this.baseSalary}`)
+  }
+}
+
+class Manager extends Employee {
+  private department : string;
+  constructor(name:string, baseSalary:number, department: string){
+    super(name, baseSalary)
+    this.department = department;
+  }
+
+  getRoleInfo(){
+    return (`Manager of ${this.department}: ${this.name}`)
+  }
+}
 
