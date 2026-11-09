@@ -4,7 +4,7 @@
 
 - All 8 problems are solved in a single file: [solutions.ts](./solutions.ts).
 
-- Every function and method has explicit parameter and return types, and the code does not use `any`.
+- Every function and method has explicit parameter and return types, and the code does not use "any".
 
 - Blog 1: [Type Alias vs Interface in TypeScript](./type-vs-interface.md)
 
